@@ -47,4 +47,4 @@ You are free to use, modify, and distribute the code with attribution.
 ## 🙌 Acknowledgments
 Thanks to all the open-source tools and contributors who make Node.js development enjoyable and powerful.
 
-Made with ❤️ by Herika Rajput(https://github.com/herikarajput3)
+Made with ❤️ by [Herika Rajput](https://github.com/herikarajput3) 
