@@ -6,7 +6,7 @@ Welcome to the **Node.js Projects Collection**, a well-organized repository that
 
 ## 📂 Projects
 
-- **CLI ToDo List App** – A command-line task manager using Node.js.
+- **ToDo App Backend** – A RESTful Express and MongoDB-based task manager API
 
 > More projects coming soon...
 
