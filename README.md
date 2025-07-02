@@ -17,9 +17,9 @@ Welcome to the **Node.js Projects Collection**, a well-organized repository that
 Each project is located in its own subfolder. To run a specific project:
 
 1. **Clone the repository**
-   ```
-   git clone https://github.com/herikarajput3/nodejs-projects-collection.git 
-   ```
+```
+git clone https://github.com/herikarajput3/nodejs-projects-collection.git 
+```
 
 2. **Navigate to the desired project**
 ```
