@@ -20,6 +20,10 @@ exports.CreateTask = async (req, res) => {
             taskData.completed = completed;
         }
 
+        if (status === 'completed') {
+            taskData.completed = true;
+        }
+
         const newTask = await TaskSchema.create(taskData)
 
         if (newTask) {
@@ -64,7 +68,34 @@ exports.GetAllTask = async (req, res) => {
 exports.UpdateTask = async (req, res) => {
     try {
         const { id } = req.params;
-        const task = await TaskSchema.findByIdAndUpdate(id);
+        const updatedData = { ...req.body };
+        if (updatedData.status === 'completed') {
+            updatedData.completed = true
+        } else {
+            updatedData.completed = false
+        }
+
+        if (updatedData.completed === 'true') {
+            updatedData.status = 'completed'
+        }
+
+
+        // Sanitize input
+        if (updatedData.completed === "") {
+            delete updatedData.completed;
+        }
+
+        if (updatedData.status === "") {
+            delete updatedData.status;
+        }
+
+        const task = await TaskSchema.findByIdAndUpdate(id,
+            updatedData,
+            {
+                new: true,
+                runValidators: true
+            }
+        );
         if (task) {
             res.status(200).json({
                 message: "Task updated successfully",
