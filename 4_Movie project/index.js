@@ -8,5 +8,5 @@ app.use('/uploads', express.static('uploads'));
 
 app.use('/', router)
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Hello, Herika!'))
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
