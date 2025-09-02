@@ -1,7 +1,6 @@
-// src/config/db.js
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect('mongodb://127.0.0.1:27017/blog_backend')
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
